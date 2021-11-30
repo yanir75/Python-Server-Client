@@ -30,9 +30,11 @@ while True:
         filename = message.split()[1]
         f = open(filename[1:])
         # creating the response according to the message header and html file
-        outputdata = 'HTTP/1.0 200 OK\n'
-        outputdata += 'Content-Type: text/html\n\n'
-        outputdata += f.read()
+        # outputdata = 'HTTP/1.1 200 OK\n'
+        # outputdata += 'Content-Type: text/html\n\n'
+        outputdata = f.read()
+        connectionSocket.send('''HTTP/1.1 200 OK\n
+       Content-Type: text/html\n\n'''.encode())
         # closing the file
         f.close()
         # Fill in start       #Fill in end
@@ -47,7 +49,7 @@ while True:
         connectionSocket.close()
     except IOError:
         # returns not found in case of an error as requested
-        outputdata = 'HTTP/1.0 404 Not Found\n'
+        outputdata = 'HTTP/1.1 404 Not Found\n'
         for i in range(0, len(outputdata)):
             connectionSocket.send(outputdata[i].encode())
         connectionSocket.send("\r\n".encode())

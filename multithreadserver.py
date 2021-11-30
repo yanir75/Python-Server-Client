@@ -17,7 +17,7 @@ class Socket_thread(threading.Thread):
             filename = message.split()[1]
             f = open(filename[1:])
             # creating the response according to the message header and html file
-            outputdata = 'HTTP/1.0 200 OK\n'
+            outputdata = 'HTTP/1.1 200 OK\n'
             outputdata += 'Content-Type: text/html\n\n'
             outputdata += f.read()
             # closing the file
@@ -27,7 +27,6 @@ class Socket_thread(threading.Thread):
             # Fill in start
             # Fill in end
             # Send the content of the requested file to the client
-            time.sleep(5)
             for i in range(0, len(outputdata)):
                 connectionSocket.send(outputdata[i].encode())
             connectionSocket.send("\r\n".encode())
@@ -35,7 +34,7 @@ class Socket_thread(threading.Thread):
             connectionSocket.close()
         except IOError:
             # returns not found in case of an error as requested
-            outputdata = 'HTTP/1.0 404 Not Found\n'
+            outputdata = 'HTTP/1.1 404 Not Found\n'
             for i in range(0, len(outputdata)):
                 connectionSocket.send(outputdata[i].encode())
             connectionSocket.send("\r\n".encode())
