@@ -33,8 +33,7 @@ while True:
         # outputdata = 'HTTP/1.1 200 OK\n'
         # outputdata += 'Content-Type: text/html\n\n'
         outputdata = f.read()
-        connectionSocket.send('''HTTP/1.1 200 OK\n
-       Content-Type: text/html\n\n'''.encode())
+        connectionSocket.send('''HTTP/1.1 200 OK\nContent-Type: text/html\n\n'''.encode())
         # closing the file
         f.close()
         # Fill in start       #Fill in end
