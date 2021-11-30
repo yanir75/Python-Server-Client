@@ -1,6 +1,5 @@
 import time
 from socket import *
-import imgui
 target_port = 10000  # create a socket object
 client = socket(AF_INET, SOCK_STREAM)
 host = gethostname()
