@@ -10,13 +10,13 @@ client.connect((host, target_port))
 request = f'GET /helloworld.html'
 client.send(request.encode())
 
-# receive some data
-try:
-    time.sleep(2)
-    response = client.recv(4096).decode()
-    print(response)
-except:
-    print("error")
+for i in range(0,5):
+    try:
+        # time.sleep(2)
+        response = client.recv(4096).decode()
+        print(response)
+    except:
+        print("error")
 
 # display the response
 
