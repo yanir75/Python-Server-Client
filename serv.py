@@ -15,7 +15,6 @@ serverSocket.listen(1)
 # Prepare a sever socket
 # Fill in start
 # Fill in end
-li = []
 while True:
     # Establish the connection
     print('Ready to serve...')
