@@ -9,7 +9,7 @@ There is an option for multithreaded server.
 
 First lets clone the repository
 ```
-git clone https://github.com/yanir75/Assignment-3.git
+git clone https://github.com/yanir75/Python-Server-Client.git
 ```
 Lets activate the server
 ```
