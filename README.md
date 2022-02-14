@@ -19,5 +19,5 @@ Then lets activate the client
 ```
 python client.py
 ```
-You can also reach it through a browser http://<Printed host name>/helloworld.html
+You can also reach it through a browser http://' Printed host name '/helloworld.html
 Serv will print the hostname.
