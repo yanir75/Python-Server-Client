@@ -1,10 +1,9 @@
 # Client-server
 
-This project will be on creating a server and a client in python
-Most basic usage we will create a server which will receive a request for helloworld.html file.
-And will return it.
-There is an option for multithreaded server.
-
+This project will be on creating a server and a client in python. Simple server client.  
+Most basic usage we will create a server which will receive a request for helloworld.html file.  
+And will return it.  
+There is an option for multithreaded server.  
 # How to use
 
 First lets clone the repository
